@@ -92,7 +92,8 @@ for (n in 1:length(dataset$subject)) {
 replace_number_activity <- function(row){
     row <- activities[row]
 }
-dataset_mean_stds$activity <- sapply(dataset_mean_stds$activity,
-                                     replace_number_activity)
 dataset_averages$activity <- sapply(dataset_averages$activity,
                                      replace_number_activity)
+
+##Save the final data set as csv 
+write.table(dataset_averages, "tidy_dataset.txt")
