@@ -4,7 +4,7 @@ Data comes from the study "Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier P
 
 # Code book
 
-[Original data (information extracted from the README.txt, features_info and activity_labels.txt)]
+*Original data (information extracted from the README.txt, features_info and activity_labels.txt)
 
 Subject: identifies the subject who performed the activity. Its range is from 1 to 30. 
 
@@ -16,7 +16,7 @@ Activities: links the class labels with their activity name. Its range is from 1
   5 STANDING.
   6 LAYING. 
 
-Features: the features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. Features are normalized and bounded within {-1,1}.
+Features: the features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. Features are normalized and bounded within [-1,1].
 
 The different components that describe a feature, grouped by alternatives, are:
 
@@ -26,8 +26,8 @@ The different components that describe a feature, grouped by alternatives, are:
   Body: part of the aceleration signal correspondent to the movement of the body.
   Gravity: part of the aceleration signal correspondent to the effect of gravity.
 
-  Acc: linear acceleration measured with accelerometer.
-  Gyro: angular velocity measured with gyroscope.
+  Acc: linear acceleration measured with accelerometer in standard gravity units 'g'.
+  Gyro: angular velocity measured with gyroscope in radians/second.
 
   Jerk: change of accelaration calculated using body linear accelaration and angular velocity in time.
   Mag: magnitude of the signals calculated using the Euclidean norm.
@@ -53,4 +53,13 @@ The different components that describe a feature, grouped by alternatives, are:
   bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
   angle(): Angle between to vectors.
 
-[]
+*Summary choices made for cleaning the data
+
+Aesthetical changes:
+  Data is sorted primarily by subject and secondarily activity.
+  From the column names were trimmed unnecessary "X"s, numbers and points.
+
+Data transformations:
+  Only the measurements on the mean and standard deviation are retained
+  From the remaining data, the average of each variable for each subject and each activity is calculated.
+  Finally, all activities get a descriptive name instead of only a number.
