@@ -4,7 +4,7 @@ Data comes from the study "Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier P
 
 # Code book
 
-###### Original data (information extracted from the README.txt, features_info and activity_labels.txt)
+##### Original data (information extracted from the README.txt, features_info and activity_labels.txt)
 
 Subject: identifies the subject who performed the activity. Its range is from 1 to 30. 
 
@@ -53,7 +53,7 @@ The different components that describe a feature, grouped by alternatives, are:
   bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
   angle(): Angle between to vectors.
 
-###### Summary choices made for cleaning the data
+##### Summary choices made for cleaning the data
 
 Aesthetical changes:
   Data is sorted primarily by subject and secondarily activity.
